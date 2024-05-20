@@ -1,7 +1,9 @@
 local M = {}
 
-M.setup = function()
-  require('dkrasiev.keymaps').setup()
+M.setup = function(opts)
+  if opts.keymaps then
+    require('dkrasiev.keymaps').setup()
+  end
 end
 
 return M
